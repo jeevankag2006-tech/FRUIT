@@ -1,0 +1,66 @@
+[
+  {
+    "id": "strawberry",
+    "name": "Strawberries",
+    "emoji": "🍓",
+    "price": 6.99,
+    "unit": "lb",
+    "note": "Organic, local"
+  },
+  {
+    "id": "orange",
+    "name": "Cara Cara oranges",
+    "emoji": "🍊",
+    "price": 2.49,
+    "unit": "lb",
+    "note": "Juicy, low acid"
+  },
+  {
+    "id": "mango",
+    "name": "Ataulfo mangoes",
+    "emoji": "🥭",
+    "price": 1.99,
+    "unit": "each",
+    "note": "Honey-sweet"
+  },
+  {
+    "id": "grape",
+    "name": "Concord grapes",
+    "emoji": "🍇",
+    "price": 4.29,
+    "unit": "lb",
+    "note": "Slip-skin, aromatic"
+  },
+  {
+    "id": "apple",
+    "name": "Honeycrisp apples",
+    "emoji": "🍎",
+    "price": 3.79,
+    "unit": "lb",
+    "note": "Crisp & bright"
+  },
+  {
+    "id": "banana",
+    "name": "Fair-trade bananas",
+    "emoji": "🍌",
+    "price": 0.79,
+    "unit": "lb",
+    "note": "Ripen on the counter"
+  },
+  {
+    "id": "kiwi",
+    "name": "Gold kiwifruit",
+    "emoji": "🥝",
+    "price": 5.49,
+    "unit": "lb",
+    "note": "Tropical tang"
+  },
+  {
+    "id": "peach",
+    "name": "White peaches",
+    "emoji": "🍑",
+    "price": 4.99,
+    "unit": "lb",
+    "note": "Tree-ripened"
+  }
+]

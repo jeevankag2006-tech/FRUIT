@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunripe Market — Fresh Fruit Daily</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo">Sunripe<span>Market</span></a>
+        <nav class="nav" aria-label="Main">
+          <a href="#shop">Shop</a>
+          <a href="#orders">Orders</a>
+          <a href="#seasonal" class="nav-hide-sm">Seasonal</a>
+          <a href="#about" class="nav-hide-sm">Our story</a>
+        </nav>
+        <button type="button" class="cart-toggle" id="cartToggle" aria-expanded="false" aria-controls="cartPanel">
+          <span class="cart-icon" aria-hidden="true">🧺</span>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Est. at the corner of orchard & table</p>
+          <h1>Fruit picked for flavor, not shelf life.</h1>
+          <p class="lede">
+            Heirloom varieties, regional growers, and same-week harvests. Build a basket
+            and we’ll have it ready for pickup or delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Browse the market</a>
+            <a class="btn btn-ghost" href="#seasonal">What’s in season</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit">
+            <span class="orb orb-a">🍊</span>
+            <span class="orb orb-b">🍓</span>
+            <span class="orb orb-c">🥭</span>
+            <span class="orb orb-d">🍇</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="trust-inner">
+          <span><strong>48h</strong> from branch to door</span>
+          <span><strong>No</strong> cold-chain shortcuts</span>
+          <span><strong>100%</strong> compostable packing</span>
+        </div>
+      </section>
+
+      <section id="shop" class="section shop">
+        <div class="section-head">
+          <h2>Shop by fruit</h2>
+          <p>Prices per pound unless noted. All organic where marked.</p>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <p class="product-grid-msg" id="productGridMsg">Loading the market…</p>
+        </div>
+      </section>
+
+      <section id="orders" class="section orders-section">
+        <div class="section-head">
+          <h2>Track &amp; order history</h2>
+          <p>Tracking ID is on your receipt after checkout. Your recent orders on this device appear below.</p>
+        </div>
+
+        <div class="orders-layout">
+          <div class="orders-track-card">
+            <h3>Track a shipment</h3>
+            <form class="track-form" id="trackForm" autocomplete="on">
+              <label class="sr-only" for="trackingInput">Tracking or order ID</label>
+              <input
+                type="text"
+                id="trackingInput"
+                name="tracking"
+                placeholder="e.g. SR-A1B2C3"
+                class="track-input"
+                spellcheck="false"
+              />
+              <button type="submit" class="btn btn-primary track-submit">Track</button>
+            </form>
+            <p class="track-hint">Demo timeline advances by time placed: packing after 2 min, out for delivery after 15 min, delivered after 45 min.</p>
+          </div>
+
+          <div class="orders-history-card">
+            <div class="orders-history-head">
+              <h3>Your orders (this browser)</h3>
+              <button type="button" class="btn-text" id="clearHistoryBtn" hidden>Clear list</button>
+            </div>
+            <ul class="orders-history-list" id="ordersHistoryList"></ul>
+            <p class="orders-history-empty" id="ordersHistoryEmpty">No orders yet—place one from your basket.</p>
+          </div>
+        </div>
+
+        <div class="track-result" id="trackResult" hidden></div>
+      </section>
+
+      <section id="seasonal" class="section seasonal">
+        <div class="seasonal-card">
+          <div class="seasonal-text">
+            <h2>April at Sunripe</h2>
+            <p>
+              Blood oranges winding down, strawberries climbing, and the first cherries
+              are landing next week. Our buyers taste every lot—if it doesn’t pass the
+              “eat it in the car” test, it doesn’t hit the shelf.
+            </p>
+            <ul class="seasonal-list">
+              <li>Peak: strawberries, cara cara oranges, kiwi</li>
+              <li>Arriving soon: Rainier cherries, apricots</li>
+            </ul>
+          </div>
+          <div class="seasonal-badge" aria-hidden="true">SPRING<br />HARVEST</div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="about-grid">
+          <div>
+            <h2>Small batches, big taste</h2>
+            <p>
+              We partner with family farms within a few hundred miles. That means shorter
+              transit, riper picks, and fruit that actually smells like fruit.
+            </p>
+            <p>
+              Questions about allergies, ripeness, or a custom gift box? Reply to any
+              order email—we read them all.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">32</span>
+              <span class="stat-label">grower partners</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">12</span>
+              <span class="stat-label">years at the stall</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4.9</span>
+              <span class="stat-label">avg. basket rating</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Sunripe Market</strong>
+          <p>Open daily 8–8 · 214 Grove Street</p>
+        </div>
+        <p class="footer-note">Orders saved on the server (demo — no payment).</p>
+      </div>
+    </footer>
+
+    <aside class="cart-panel" id="cartPanel" hidden aria-label="Shopping cart">
+      <div class="cart-panel-header">
+        <h2>Your basket</h2>
+        <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">Nothing here yet—add something juicy.</div>
+      <div class="cart-footer" id="cartFooter" hidden>
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="checkoutBtn">Place order</button>
+      </div>
+    </aside>
+    <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
